@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
+import QtQuick.Dialogs 1.3
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import "../lib"
@@ -49,6 +50,7 @@ ConfigPage {
 				text: i18n("Filename:")
 			}
 			ConfigString {
+				id: filenameInput
 				configKey: 'noteFilename'
 				enabled: !useGlobalNote.checked
 
@@ -60,6 +62,24 @@ ConfigPage {
 						return 'todolist_' + plasmoid.id
 					}
 				}
+			}
+			Button {
+				iconName: "document-open"
+				tooltip: i18n("Select File")
+				enabled: !useGlobalNote.checked
+				onClicked: fileDialog.open()
+			}
+		}
+
+		FileDialog {
+			id: fileDialog
+			title: i18n("Choose Note File")
+			folder: shortcuts.home
+			selectExisting: false
+			selectMultiple: false
+			nameFilters: [ i18n("Text files (*.txt)"), i18n("All files (*)") ]
+			onAccepted: {
+				filenameInput.text = fileDialog.fileUrl.toString().replace(/^file:\/\//, "");
 			}
 		}
 	}
