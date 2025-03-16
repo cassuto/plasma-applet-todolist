@@ -9,7 +9,7 @@ ConfigPage {
 
 	ConfigSection {
 		Label {
-			text: i18n("Checkbox Style")
+			text: i18n("Text Style")
 			font.bold: true
 			font.pointSize: theme.defaultFont.pointSize * 1.1
 		}
