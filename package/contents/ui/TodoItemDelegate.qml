@@ -155,6 +155,12 @@ MouseArea {
 					   plasmoid.configuration.textBackgroundColor : "transparent"
 				visible: plasmoid.configuration.useCustomTextBackground
 				radius: 3
+
+				// Add border properties
+				border.color: plasmoid.configuration.useCustomTextBackground ?
+							  plasmoid.configuration.borderColor : "transparent"
+				border.width: plasmoid.configuration.useCustomTextBackground ?
+							  plasmoid.configuration.borderWidth : 0
 			}
 
 			Timer {
