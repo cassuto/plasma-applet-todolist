@@ -9,7 +9,7 @@ ConfigPage {
 
 	ConfigSection {
 		Label {
-			text: i18n("Text Style")
+			text: i18n("Item Style")
 			font.bold: true
 			font.pointSize: theme.defaultFont.pointSize * 1.1
 		}
@@ -17,7 +17,7 @@ ConfigPage {
 		ConfigCheckBox {
 			id: useCustomTextBackground
 			configKey: "useCustomTextBackground"
-			text: i18n("Use custom text background")
+			text: i18n("Use custom background & border")
 		}
 
 		ConfigColorButton {
@@ -27,10 +27,27 @@ ConfigPage {
 			enabled: useCustomTextBackground.checked
 		}
 
+		ConfigColorButton {
+			id: borderColor
+			configKey: "borderColor"
+			label: i18n("Border color:")
+			enabled: useCustomTextBackground.checked
+		}
+
+		ConfigSpinBox {
+			id: borderWidth
+			configKey: "borderWidth"
+			before: i18n("Border width:")
+			suffix: i18n(" px")
+			minimumValue: 0
+			maximumValue: 10
+			enabled: useCustomTextBackground.checked
+		}
+
 		ConfigCheckBox {
 			id: useCustomTextColor
 			configKey: "useCustomTextColor"
-			text: i18n("Use custom text foreground")
+			text: i18n("Use custom foreground")
 		}
 
 		ConfigColorButton {

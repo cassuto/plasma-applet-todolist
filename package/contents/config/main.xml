@@ -64,6 +64,12 @@
 		<entry name="textColor" type="string">
 			<default>#000000</default>
 		</entry>
+		<entry name="borderColor" type="string">
+			<default>#bebfc0</default>
+		</entry>
+		<entry name="borderWidth" type="int">
+			<default>1</default>
+		</entry>
 	</group>
 
 </kcfg>
