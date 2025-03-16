@@ -17,27 +17,27 @@ ConfigPage {
 		ConfigCheckBox {
 			id: useCustomTextBackground
 			configKey: "useCustomTextBackground"
-			text: i18n("Use custom background & border")
+			text: i18n("Use Custom Background & Border")
 		}
 
 		ConfigColorButton {
 			id: textBackgroundColor
 			configKey: "textBackgroundColor"
-			label: i18n("Text background color:")
+			label: i18n("Text Background Color:")
 			enabled: useCustomTextBackground.checked
 		}
 
 		ConfigColorButton {
 			id: borderColor
 			configKey: "borderColor"
-			label: i18n("Border color:")
+			label: i18n("Border Color:")
 			enabled: useCustomTextBackground.checked
 		}
 
 		ConfigSpinBox {
 			id: borderWidth
 			configKey: "borderWidth"
-			before: i18n("Border width:")
+			before: i18n("Border Width:")
 			suffix: i18n(" px")
 			minimumValue: 0
 			maximumValue: 10
@@ -47,13 +47,13 @@ ConfigPage {
 		ConfigCheckBox {
 			id: useCustomTextColor
 			configKey: "useCustomTextColor"
-			text: i18n("Use custom foreground")
+			text: i18n("Use Custom Foreground")
 		}
 
 		ConfigColorButton {
 			id: textColor
 			configKey: "textColor"
-			label: i18n("Text foreground color:")
+			label: i18n("Text Foreground Color:")
 			enabled: useCustomTextColor.checked
 		}
 	}
