@@ -14,17 +14,17 @@ ConfigPage {
 			font.pointSize: theme.defaultFont.pointSize * 1.1
 		}
 
-        ConfigCheckBox {
-            id: useCustomTextBackground
-            configKey: "useCustomTextBackground"
-            text: i18n("Use custom text background")
-        }
+		ConfigCheckBox {
+			id: useCustomTextBackground
+			configKey: "useCustomTextBackground"
+			text: i18n("Use custom text background")
+		}
 
-        ConfigColorButton {
-            id: textBackgroundColor
-            configKey: "textBackgroundColor"
-            label: i18n("Text background color:")
-            enabled: useCustomTextBackground.checked
-        }
-    }
+		ConfigColorButton {
+			id: textBackgroundColor
+			configKey: "textBackgroundColor"
+			label: i18n("Text background color:")
+			enabled: useCustomTextBackground.checked
+		}
+	}
 }
