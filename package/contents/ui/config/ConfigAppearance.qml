@@ -9,22 +9,35 @@ ConfigPage {
 
 	ConfigSection {
 		Label {
-			text: i18n("Checkbox Style")
+			text: i18n("Text Style")
 			font.bold: true
 			font.pointSize: theme.defaultFont.pointSize * 1.1
 		}
 
-        ConfigCheckBox {
-            id: useCustomTextBackground
-            configKey: "useCustomTextBackground"
-            text: i18n("Use custom text background")
-        }
+		ConfigCheckBox {
+			id: useCustomTextBackground
+			configKey: "useCustomTextBackground"
+			text: i18n("Use custom text background")
+		}
 
-        ConfigColorButton {
-            id: textBackgroundColor
-            configKey: "textBackgroundColor"
-            label: i18n("Text background color:")
-            enabled: useCustomTextBackground.checked
-        }
-    }
+		ConfigColorButton {
+			id: textBackgroundColor
+			configKey: "textBackgroundColor"
+			label: i18n("Text background color:")
+			enabled: useCustomTextBackground.checked
+		}
+
+		ConfigCheckBox {
+			id: useCustomTextColor
+			configKey: "useCustomTextColor"
+			text: i18n("Use custom text foreground")
+		}
+
+		ConfigColorButton {
+			id: textColor
+			configKey: "textColor"
+			label: i18n("Text foreground color:")
+			enabled: useCustomTextColor.checked
+		}
+	}
 }
