@@ -79,7 +79,7 @@ ConfigPage {
 			selectMultiple: false
 			nameFilters: [ i18n("Text files (*.txt)"), i18n("All files (*)") ]
 			onAccepted: {
-				filenameInput.text = fileDialog.fileUrl.toString().replace(/^file:\/\//, "");
+				plasmoid.configuration.noteFilename = fileDialog.fileUrl.toString().replace(/^file:\/\//, "");
 			}
 		}
 	}
