@@ -52,7 +52,12 @@
 		<entry name="roundCounter" type="bool">
 			<default>true</default>
 		</entry>
+		<entry name="useCustomTextBackground" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="textBackgroundColor" type="string">
+			<default>#f8edc9</default>
+		</entry>
 	</group>
 
 </kcfg>
-

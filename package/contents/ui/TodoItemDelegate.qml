@@ -143,6 +143,16 @@ MouseArea {
 				}
 			}
 
+			// Custom text background
+			Rectangle {
+				z: -1
+				anchors.fill: parent
+				color: plasmoid.configuration.useCustomTextBackground ? 
+					   plasmoid.configuration.textBackgroundColor : "transparent"
+				visible: plasmoid.configuration.useCustomTextBackground
+				radius: 3
+			}
+
 			Timer {
 				id: delayedSelect
 				property int cursorPosition: -1
