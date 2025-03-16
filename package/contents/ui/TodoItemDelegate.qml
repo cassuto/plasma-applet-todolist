@@ -136,6 +136,10 @@ MouseArea {
 
 			textMargin: 0
 
+			// Apply custom text color if enabled
+			color: plasmoid.configuration.useCustomTextColor ?
+				   plasmoid.configuration.textColor : theme.textColor
+
 			focus: todoItemDelegate.ListView.isCurrentItem
 			onActiveFocusChanged: {
 				if (activeFocus) {
@@ -208,7 +212,7 @@ MouseArea {
 				out = out.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
 					return '&#' + i.charCodeAt(0) + ';'
 				})
-				
+
 				// Render links
 				var rUrl = /(http|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/gi
 				out = out.replace(rUrl, function(m) {

@@ -26,5 +26,18 @@ ConfigPage {
 			label: i18n("Text background color:")
 			enabled: useCustomTextBackground.checked
 		}
+
+		ConfigCheckBox {
+			id: useCustomTextColor
+			configKey: "useCustomTextColor"
+			text: i18n("Use custom text foreground")
+		}
+
+		ConfigColorButton {
+			id: textColor
+			configKey: "textColor"
+			label: i18n("Text foreground color:")
+			enabled: useCustomTextColor.checked
+		}
 	}
 }
